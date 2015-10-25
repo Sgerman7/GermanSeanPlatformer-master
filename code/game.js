@@ -411,6 +411,8 @@ Level.prototype.playerTouched = function(type, actor) {
   }
 };
 
+
+
 // Arrow key codes for readibility
 var arrowCodes = {37: "left", 38: "up", 39: "right"};
 
@@ -477,6 +479,7 @@ function runLevel(level, Display, andThen) {
     }
   });
 }
+        var lives = 3;
 
   function runGame(plans, Display) {
     function startLevel(n, lives) {
@@ -486,18 +489,21 @@ function runLevel(level, Display, andThen) {
         if (status == "lost") {
           if (lives > 0) {
             startLevel(n, lives - 1);
+                      alert("Lives = " + lives + "/3");
+
           } else {
             console.log("Game over");
-            startLevel(0, 3);
+            startLevel(0, 2);
           }     
         } else if (n < plans.length - 1) {
           startLevel(n + 1, lives);
+          alert("Lives = " + lives + "/3");
         } else {
           console.log("You win!");
         }
       });
     }
-    startLevel(0, 3);
+    startLevel(0, 2);
   }
 
 

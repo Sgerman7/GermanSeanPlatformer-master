@@ -11,7 +11,7 @@
 
 .actor  { position: absolute;  }
 .coin   { background-image: url(star.png);
-            background-size: 12px 12px;;}
+            background-size: 12px 12px;}
 .player { background-image: url(player.png);
             background-size: 14px 21px;}
 .enemy	{ background-image: url(2.gif);
@@ -21,7 +21,6 @@
 			     border-right: thick dotted white;}
 
 
-
 .game {
   overflow: hidden;
   max-width: 800px;
@@ -29,13 +28,12 @@
   position: relative;
 }
 
-.lost .player {
-  background: rgb(220, 55, 22);
-  box-shadow: 0px 0px 8px white;
-  opacity: .5;
+.lost .player { background-image: url(player.png);
+            background-size: 14px 21px;
+  box-shadow: 0px 0px 8px aqua;
 }
 .won .player {
-  box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+  box-shadow: -2px -2px 8px white, 2px -2px 8px white;
 }
 
 
